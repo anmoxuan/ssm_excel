@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="nenglitang@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="nenglitang">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="aaa"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="superssm"/>
+    <schema id="8" parent="1" name="sys"/>
+    <table id="9" parent="2" name="ability"/>
+    <table id="10" parent="2" name="abilitydetails"/>
+    <table id="11" parent="2" name="chance"/>
+    <table id="12" parent="2" name="contact"/>
+    <table id="13" parent="2" name="evaluate"/>
+    <table id="14" parent="2" name="order"/>
+    <table id="15" parent="2" name="relation"/>
+    <table id="16" parent="2" name="score"/>
+    <table id="17" parent="2" name="task"/>
+    <table id="18" parent="2" name="userinfo"/>
+    <column id="19" parent="9" name="ab_id">
+      <Position>1</Position>
+      <Comment>能力编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="9" name="ab_name">
+      <Position>2</Position>
+      <Comment>能力类型</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="21" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ab_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="10" name="ad_id">
+      <Position>1</Position>
+      <Comment>编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="10" name="ad_desc">
+      <Position>2</Position>
+      <Comment>能力描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="24" parent="10" name="ad_accept">
+      <Position>3</Position>
+      <Comment>好友认可能力次数</Comment>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <column id="25" parent="10" name="ad_praise">
+      <Position>4</Position>
+      <Comment>需方评价次数</Comment>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <column id="26" parent="10" name="ad_prove">
+      <Position>5</Position>
+      <Comment>能力证明</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="27" parent="10" name="ab_id">
+      <Position>6</Position>
+      <Comment>能力编号</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="28" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ad_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="11" name="chid">
+      <Position>1</Position>
+      <Comment>机会编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="11" name="ucid">
+      <Position>2</Position>
+      <Comment>用户机会</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="31" parent="11" name="ucnum">
+      <Position>3</Position>
+      <Comment>机会次数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="32" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>chid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="12" name="id">
+      <Position>1</Position>
+      <Comment>联系编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="12" name="qq">
+      <Position>2</Position>
+      <Comment>QQ</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="35" parent="12" name="wx">
+      <Position>3</Position>
+      <Comment>微信</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="weibo">
+      <Position>4</Position>
+      <Comment>微博</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="phone">
+      <Position>5</Position>
+      <Comment>电话</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="email">
+      <Position>6</Position>
+      <Comment>邮件</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="39" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="13" name="e_id">
+      <Position>1</Position>
+      <Comment>评价编号 </Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="13" name="e_oid">
+      <Position>2</Position>
+      <Comment>订单编号</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="e_desc">
+      <Position>3</Position>
+      <Comment>评价描述 </Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="43" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>e_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="14" name="o_id">
+      <Position>1</Position>
+      <Comment>订单编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="14" name="o_pid">
+      <Position>2</Position>
+      <Comment>供方编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="14" name="o_nid">
+      <Position>3</Position>
+      <Comment>需方编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="14" name="amount">
+      <Position>4</Position>
+      <Comment>交易金额</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="14" name="state">
+      <Position>5</Position>
+      <Comment>状态</Comment>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="14" name="o_desc">
+      <Position>6</Position>
+      <Comment>订单描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="50" parent="14" name="o_trading">
+      <Position>7</Position>
+      <Comment>交易时间</Comment>
+      <DataType>varchar(28)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="51" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>o_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="15" name="uuid">
+      <Position>1</Position>
+      <Comment>用户关系编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="15" name="activeuser1">
+      <Position>2</Position>
+      <Comment>用户1</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="54" parent="15" name="activeuser2">
+      <Position>3</Position>
+      <Comment>用户2</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="55" parent="15" name="relation">
+      <Position>4</Position>
+      <Comment>用户关系</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="56" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uuid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="57" parent="16" name="sid">
+      <Position>1</Position>
+      <Comment>积分编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="58" parent="16" name="uid">
+      <Position>2</Position>
+      <Comment>用户编号 </Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="59" parent="16" name="score">
+      <Position>3</Position>
+      <Comment>积分</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="60" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="17" name="tid">
+      <Position>1</Position>
+      <Comment>任务订单编号</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="17" name="uid1">
+      <Position>2</Position>
+      <Comment>能力供方id</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="17" name="uid2">
+      <Position>3</Position>
+      <Comment>能力需方id</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="17" name="abilitymsg">
+      <Position>4</Position>
+      <Comment>能力基本信息</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="17" name="money">
+      <Position>5</Position>
+      <Comment>任务订单金额 </Comment>
+      <DataType>int(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="17" name="desc">
+      <Position>6</Position>
+      <Comment>任务详情 </Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="17" name="canstop">
+      <Position>7</Position>
+      <Comment>撤销终止</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="17" name="confirm">
+      <Position>8</Position>
+      <Comment>确认是否付款</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="69" parent="17" name="tast_eval">
+      <Position>9</Position>
+      <Comment>任务评价</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="70" parent="17" name="add_eval">
+      <Position>10</Position>
+      <Comment> 追加评价</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="71" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="18" name="u_id">
+      <Position>1</Position>
+      <Comment>用户编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="73" parent="18" name="u_pass">
+      <Position>2</Position>
+      <Comment>用户密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="74" parent="18" name="u_name">
+      <Position>3</Position>
+      <Comment>用户真实姓名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="75" parent="18" name="u_type">
+      <Position>4</Position>
+      <Comment>用户类型(判断供方和需方)</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="76" parent="18" name="u_nickname">
+      <Position>5</Position>
+      <Comment>用户昵称</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="77" parent="18" name="u_wallet">
+      <Position>6</Position>
+      <Comment> 钱包</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="78" parent="18" name="u_aid">
+      <Position>7</Position>
+      <Comment>能力编号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="79" parent="18" name="u_hepor">
+      <Position>8</Position>
+      <Comment>用户头像</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="80" parent="18" name="u_addre">
+      <Position>9</Position>
+      <Comment>用户地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="81" parent="18" name="u_phone">
+      <Position>10</Position>
+      <Comment>用户手机号</Comment>
+      <DataType>varchar(14)|0</DataType>
+    </column>
+    <column id="82" parent="18" name="u_adid">
+      <Position>11</Position>
+      <Comment>能力详情编号</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="83" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

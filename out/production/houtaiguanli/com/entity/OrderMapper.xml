@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD mapper 3.0//EN"
+        "mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.OrderMapper">
+    <select id="findOrder" resultType="com.entity.Order" parameterType="String">
+        SELECT * FROM `order` WHERE o_trading LIKE concat('%',#{dates},'%') ORDER BY o_trading DESC
+    </select>
+</mapper>
